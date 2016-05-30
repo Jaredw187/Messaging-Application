@@ -15,22 +15,28 @@ var userName: String = " "
 
 class ViewController: UIViewController {
     
-    // socket io
-    let socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")!, options: [.Log(true), .ForcePolling(true)])
-    socket.on("connect") {data, ack in
-        print("socket connected")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
     }
     
-    socket.on("currentAmount") {data, ack in
-        if let cur = data[0] as? Double {
-            socket.emitWithAck("canUpdate", cur)(timeoutAfter: 0) {data in
-                socket.emit("update", ["amount": cur + 2.50])
-            }
-            ack.with("Got your currentAmount", "dude")
+    // socket io
+    var socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:5000")!, options: [.Log(true), .ForcePolling(true)])
+
+    func addHandlers() {
+        socket.on("connect") {data, ack in
+            print("socket connected")
+        }
+    
+        socket.on("addMessage") {data, ack in
+            print("Got message")
+            self.recieveMessage(data[0] as! String, userMessage: data[2] as! String)
         }
     }
-    
-    socket.connect()
     
     // data :)
     var input: String = " "
@@ -72,6 +78,9 @@ class ViewController: UIViewController {
         message = chatRoom + " - " + userName + ": " + messageInputField.text! + "\n"
         messageField.text = messageField.text.stringByAppendingString(message)
         messageInputField.text = ""
+        
+        socket.emit("addMessage", userName, message)
+        print("emitted")
     }
     
     func recieveMessage(user: String, userMessage: String) {
@@ -87,5 +96,19 @@ class ViewController: UIViewController {
         else { }
         let viewController : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier(newView)
         self.showViewController(viewController as! UIViewController, sender: viewController)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y += keyboardSize.height
+        }
     }
 }
