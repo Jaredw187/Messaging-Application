@@ -10,35 +10,32 @@ import UIKit
 
 
 // globals. sad face :'(
-var chatRoom: String = " "
-var userName: String = " "
+var chatRoom: String = "ChatRoom1"
+var userName: String = "Jared"
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
-        
-    }
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://127.0.0.1:5000")!, options: [.Log(true), .ForcePolling(true)])
     
-    // socket io
-    var socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:5000")!, options: [.Log(true), .ForcePolling(true)])
-
     func addHandlers() {
+        
         socket.on("connect") {data, ack in
             print("socket connected")
         }
-    
-        socket.on("addMessage") {data, ack in
-            print("Got message")
-            self.recieveMessage(data[0] as! String, userMessage: data[2] as! String)
+        socket.on("newMessage") { data, ack in
+            self.recieveMessage(String(data))
         }
+        socket.connect()
     }
     
-    // data :)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        addHandlers()
+    }
+    
+    // data
     var input: String = " "
     var newView: String = " "
     var message: String = " "
@@ -54,7 +51,6 @@ class ViewController: UIViewController {
     @IBAction func getInput(sender: AnyObject) {
 
         input = ((sender as! UIButton).titleLabel!.text!);
-        
         switch input {
             case "Submit Chat":
                 if (chatRoomInput.text == "") { return }
@@ -64,9 +60,8 @@ class ViewController: UIViewController {
                 if (userNameInput.text == "") { return }
                 else { userName = userNameInput.text!; changeViews() }
                 break
-            
             case "Submit":
-                updateMessage()
+                getMessage()
                 break
             default:
                 changeViews()
@@ -74,38 +69,39 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateMessage() {
-        message = chatRoom + " - " + userName + ": " + messageInputField.text! + "\n"
-        messageField.text = messageField.text.stringByAppendingString(message)
-        messageInputField.text = ""
+    func getMessage() {
+        message = chatRoom + " - " + userName + ": " + messageInputField.text!
+        messageInputField.text = "asdf"
+        socket.emit("newMessage", message)
         
-        socket.emit("addMessage", userName, message)
-        print("emitted")
     }
     
-    func recieveMessage(user: String, userMessage: String) {
-         message = chatRoom + " - " + user + ": " + userMessage + "\n"
-         messageField.text = messageField.text.stringByAppendingString(message)
+    func recieveMessage(msg: String) {
+        // remove the braces from socket io 
+        var _msg = String(msg.characters.dropFirst())
+        _msg = String(_msg.characters.dropLast())
+        messageField.text = messageField.text.stringByAppendingString(_msg + "\n")
     }
     
+    // set the correct view depending on input from user
     func changeViews() {
         if (input == "Submit Chat") { newView = "UserName" }
         else if (input == "Submit Name") { newView = "ChatRoom" }
         else if (input == "New Room") { newView = "EnterChatRoom" }
         else if (input == "New User Name") { newView = "UserName" }
-        else { }
+        else { /* do nothing */ }
         let viewController : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier(newView)
         self.showViewController(viewController as! UIViewController, sender: viewController)
     }
     
+    // show the keyboard and move the display up
     func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y -= keyboardSize.height
         }
         
     }
-    
+    // hide the keyboard and move the display back down
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y += keyboardSize.height

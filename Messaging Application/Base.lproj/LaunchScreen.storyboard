@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Chitter Chatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-t3-q4h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chitter Chatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-t3-q4h">
                                 <rect key="frame" x="56" y="61" width="208" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="EB2-fF-2wb"/>
+                                    <constraint firstAttribute="height" constant="48" id="BWN-7x-DIv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vG-cN-HLf">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6vG-cN-HLf">
                                 <rect key="frame" x="99" y="174" width="123" height="131"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-mS-frw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-mS-frw">
                                 <rect key="frame" x="20" y="340" width="280" height="99"/>
                                 <string key="text">Created by Jared Walton on 5/28/16.
 Copyright © 2016 Jared Walton. All rights reserved.</string>
@@ -39,6 +39,19 @@ Copyright © 2016 Jared Walton. All rights reserved.</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mP4-t3-q4h" firstAttribute="centerX" secondItem="6vG-cN-HLf" secondAttribute="centerX" id="GTv-oz-KEt"/>
+                            <constraint firstItem="MPp-mS-frw" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="4" id="GTx-TS-OaC"/>
+                            <constraint firstItem="mP4-t3-q4h" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="KNy-YV-rQu"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MPp-mS-frw" secondAttribute="bottom" constant="41" id="MnA-pK-W7I"/>
+                            <constraint firstItem="6vG-cN-HLf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="NUs-dS-eAb"/>
+                            <constraint firstItem="6vG-cN-HLf" firstAttribute="top" secondItem="mP4-t3-q4h" secondAttribute="bottom" constant="65" id="Ny6-YA-Orj"/>
+                            <constraint firstItem="6vG-cN-HLf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="83" id="U16-yg-iWP"/>
+                            <constraint firstItem="mP4-t3-q4h" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g2O-WF-79Z"/>
+                            <constraint firstItem="6vG-cN-HLf" firstAttribute="centerX" secondItem="MPp-mS-frw" secondAttribute="centerX" id="jad-mt-L1i"/>
+                            <constraint firstItem="MPp-mS-frw" firstAttribute="top" secondItem="6vG-cN-HLf" secondAttribute="bottom" constant="35" id="nIw-VL-4Ze"/>
+                            <constraint firstItem="mP4-t3-q4h" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="41" id="rzz-Cl-Rsc"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
