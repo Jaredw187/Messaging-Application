@@ -24,10 +24,10 @@
     <favorites_list name="MessagingServer" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3812336">
+    <splitter split-orientation="horizontal" split-proportion="0.20849934">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MessagingServer.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MessagingServer.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MessagingServer.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
@@ -39,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="chat.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/chat.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+                <state relative-caret-position="375">
+                  <caret line="29" column="67" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
                   <folding />
                 </state>
               </provider>
@@ -68,8 +68,25 @@
           <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/chat.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+                <state relative-caret-position="580">
+                  <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+                  <folding>
+                    <marker date="1464844649000" expanded="true" signature="31:1623" placeholder="..." />
+                    <marker date="1464844649000" expanded="true" signature="119:1350" placeholder="..." />
+                    <marker date="1464844649000" expanded="true" signature="248:548" placeholder="..." />
+                    <marker date="1464844649000" expanded="true" signature="300:533" placeholder="..." />
+                    <marker date="1464844649000" expanded="true" signature="576:871" placeholder="..." />
+                    <marker date="1464844649000" expanded="true" signature="628:856" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/styles.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -78,11 +95,12 @@
           <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static/chat.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
                   <folding>
-                    <element signature="e#786#1086#0" expanded="false" />
-                    <element signature="e#1135#1373#0" expanded="false" />
+                    <element signature="e#592#812#0" expanded="false" />
+                    <element signature="e#861#1232#0" expanded="false" />
+                    <element signature="e#1281#1594#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -105,8 +123,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/templates/chat.html" />
         <option value="$PROJECT_DIR$/MessagingServer.py" />
+        <option value="$PROJECT_DIR$/static/syles.css" />
+        <option value="$PROJECT_DIR$/templates/chat.html" />
+        <option value="$PROJECT_DIR$/static/styles.css" />
         <option value="$PROJECT_DIR$/static/chat.js" />
       </list>
     </option>
@@ -118,9 +138,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
+    <option name="x" value="-912" />
     <option name="y" value="360" />
-    <option name="width" value="1920" />
+    <option name="width" value="912" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -454,16 +474,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="360" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <frame x="-912" y="360" width="912" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19009584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3148515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3148515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -509,7 +529,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
+          <folding>
+            <marker date="1464844649000" expanded="true" signature="31:1623" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="119:1350" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="248:548" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="300:533" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="576:871" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="628:856" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -518,8 +545,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#786#1086#0" expanded="false" />
-            <element signature="e#1135#1373#0" expanded="false" />
+            <element signature="e#592#812#0" expanded="false" />
+            <element signature="e#861#1232#0" expanded="false" />
+            <element signature="e#1281#1594#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,14 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MessagingServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -552,13 +572,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <marker date="1464844649000" expanded="true" signature="31:1623" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="119:1350" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="248:548" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="300:533" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="576:871" placeholder="..." />
+            <marker date="1464844649000" expanded="true" signature="628:856" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
-            <element signature="e#786#1086#0" expanded="false" />
-            <element signature="e#1135#1373#0" expanded="false" />
+            <element signature="e#592#812#0" expanded="false" />
+            <element signature="e#861#1232#0" expanded="false" />
+            <element signature="e#1281#1594#0" expanded="false" />
           </folding>
         </state>
       </provider>

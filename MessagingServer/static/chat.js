@@ -12,13 +12,13 @@ document.getElementById("getName").style.display = 'none';
 document.getElementById("chat").style.display = 'none';
 
 socket.on('connect', function() {
-    console.log("connected");
-
+    // bleh.
 });
 
 socket.on("newMessage", function(data) {
-    console.log("appended");
-    $("<ul>").addClass("text").text(data).appendTo($(".messages"));
+    var messages = document.getElementById("messages");
+    $("<ol>").addClass("text").text(data).appendTo(messages);
+    messages.scrollTop = messages.scrollHeight - messages.clientHeight;
 });
 
 $(".input").on("submit", function(action) {
@@ -46,6 +46,8 @@ $(".inputRoom").on("submit", function(action) {
     $("#room").val("");
     document.getElementById("getRoom").style.display = 'none';
     document.getElementById("getName").style.display = 'initial';
+    document.getElementById("chatRoom").innerHTML = "Room: " + room ;
+
 });
 $(".inputName").on("submit", function(action) {
     action.preventDefault();
@@ -57,4 +59,6 @@ $(".inputName").on("submit", function(action) {
 
     document.getElementById("getName").style.display = 'none';
     document.getElementById("chat").style.display = 'initial';
+    document.getElementById("userName").innerHTML = "User Name: " + name;
+
 });

@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     @IBOutlet var userNameInput: UITextField!
     @IBOutlet var infoDisplay: UILabel!
     @IBOutlet var messageInputField: UITextField!
-    @IBOutlet var messageField: UITextView!
+    @IBOutlet var messageField: UITextView?
     
     // obtain user input with buttons
     @IBAction func getInput(sender: AnyObject) {
@@ -80,8 +80,10 @@ class ViewController: UIViewController {
         // remove the braces from socket io 
         var _msg = String(msg.characters.dropFirst())
         _msg = String(_msg.characters.dropLast())
-        messageField.text = messageField.text.stringByAppendingString(_msg + "\n")
+        messageField?.text = messageField?.text.stringByAppendingString(_msg + "\n")
+        messageField?.contentOffset = CGPointMake(0, (messageField?.contentSize.height)! - (messageField?.frame.size.height)!)
     }
+    
     
     // set the correct view depending on input from user
     func changeViews() {

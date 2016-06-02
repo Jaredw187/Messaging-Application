@@ -7,10 +7,12 @@
     <body>
         <h1>Chitter Chatter</h1>
 
+        <div id="userName"></div>
+        <div id="chatRoom"></div>
         <div id="getRoom">
             <form id="inputRoom" class="inputRoom">
                 <label for="room">Enter Room Name:</label> <br>
-                <input type="text" name="room" id="room" placeholder="Enter Room Here.."> <br>
+                <input type="text" name="room" id="room" placeholder="Enter Room Here.."> &nbsp;
                 <button type="submit">Send</button>
             </form>
         </div>
@@ -18,17 +20,17 @@
         <div id="getName">
             <form id="inputName" class="inputName">
                 <label for="name">Enter Name:</label> <br>
-                <input type="text" name="name" id="name" placeholder="Enter Name Here.."> <br>
+                <input type="text" name="name" id="name" placeholder="Enter Name Here.."> &nbsp;
                 <button type="submit">Send</button>
             </form>
         </div>
 
         <div id="chat">
             <h3> Messages </h3>
-            <ol class="messages" id="messages"> </ol>
+            <ol class="messages" id="messages"style="width: 300px; height: 200px; overflow: auto;"> </ol>
             <form id="input" class="input">
                 <label for="message">Enter Message:</label> <br>
-                <input type="text" name="message" id="message" placeholder="Enter Message Here.."> <br>
+                <input type="text" name="message" id="message" placeholder="Enter Message Here.."> &nbsp;
                 <button type="submit">Send</button>
             </form>
         </div>
@@ -39,4 +41,5 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="/static/chat.js" async></script>
+    <script src="/static/styles.css" async></script>
 </html>
