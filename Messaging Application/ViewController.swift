@@ -80,8 +80,8 @@ class ViewController: UIViewController {
     
     func recieveMessage(msg: String) {
         // remove the braces from socket io 
-        //var _msg = String(msg.characters.dropFirst())
-        //_msg = String(_msg.characters.dropLast())
+//        var _msg = String(msg.characters.dropFirst())
+//        _msg = String(_msg.characters.dropLast())
         messageField?.text = messageField?.text.stringByAppendingString(msg + "\n")
         let range = (NSMakeRange(((messageField?.text.characters.count)!-1), 0))
         messageField?.scrollRangeToVisible(range)
