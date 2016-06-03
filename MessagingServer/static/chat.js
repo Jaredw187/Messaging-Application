@@ -28,7 +28,7 @@ $(".input").on("submit", function(action) {
 
     if (!message)  return;
     message = room + ' - ' + name + ': ' + message
-    socket.emit("newMessage", message );
+    socket.emit("newMessage", {message:message, room:room});
 
     $("#message").val("");
 });
@@ -46,7 +46,7 @@ $(".inputRoom").on("submit", function(action) {
     $("#room").val("");
     document.getElementById("getRoom").style.display = 'none';
     document.getElementById("getName").style.display = 'initial';
-    document.getElementById("chatRoom").innerHTML = "Room: " + room ;
+    document.getElementById("chatRoom").innerHTML = "Room Name: " + room ;
 
 });
 $(".inputName").on("submit", function(action) {

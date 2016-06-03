@@ -20,12 +20,14 @@ class ViewController: UIViewController {
     func addHandlers() {
         
         socket.on("connect") {data, ack in
-            print("socket connected")
+            print("connected")
         }
         socket.on("newMessage") { data, ack in
-            self.recieveMessage(String(data))
+            print("got it")
+            self.recieveMessage(String(data[0]))
         }
         socket.connect()
+        socket.emit("join", chatRoom)
     }
     
     override func viewDidLoad() {
@@ -71,20 +73,20 @@ class ViewController: UIViewController {
     
     func getMessage() {
         message = chatRoom + " - " + userName + ": " + messageInputField.text!
-        messageInputField.text = "asdf"
-        socket.emit("newMessage", message)
+        messageInputField.text = ""
+        socket.emit("newMessage", ["message":message, "room":chatRoom])
         
     }
     
     func recieveMessage(msg: String) {
         // remove the braces from socket io 
-        var _msg = String(msg.characters.dropFirst())
-        _msg = String(_msg.characters.dropLast())
-        messageField?.text = messageField?.text.stringByAppendingString(_msg + "\n")
-        messageField?.contentOffset = CGPointMake(0, (messageField?.contentSize.height)! - (messageField?.frame.size.height)!)
+        //var _msg = String(msg.characters.dropFirst())
+        //_msg = String(_msg.characters.dropLast())
+        messageField?.text = messageField?.text.stringByAppendingString(msg + "\n")
+        let range = (NSMakeRange(((messageField?.text.characters.count)!-1), 0))
+        messageField?.scrollRangeToVisible(range)
+        
     }
-    
-    
     // set the correct view depending on input from user
     func changeViews() {
         if (input == "Submit Chat") { newView = "UserName" }
