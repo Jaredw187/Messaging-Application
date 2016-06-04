@@ -8,6 +8,13 @@
 
 import UIKit
 
+// adding an extension for scrolling capabilties
+extension UITextView {
+    func moveTextUp() {
+        let length = NSMakeRange((text as NSString).length - 1, 0);
+        scrollRangeToVisible(length);
+    }
+}
 
 // globals. sad face :'(
 var chatRoom: String = "r"
@@ -35,6 +42,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         addHandlers()
+        self.messageField?.layoutManager.allowsNonContiguousLayout = false
     }
     
     // data
@@ -48,6 +56,7 @@ class ViewController: UIViewController {
     @IBOutlet var infoDisplay: UILabel!
     @IBOutlet var messageInputField: UITextField!
     @IBOutlet var messageField: UITextView?
+    @IBOutlet var roomLabel: UILabel!
     
     // obtain user input with buttons
     @IBAction func getInput(sender: AnyObject) {
@@ -83,10 +92,7 @@ class ViewController: UIViewController {
 //        var _msg = String(msg.characters.dropFirst())
 //        _msg = String(_msg.characters.dropLast())
         messageField?.text = messageField?.text.stringByAppendingString(msg + "\n")
-//        scroll
-//        let range = (NSMakeRange(((messageField?.contentSize.height)?-1), 0))
-//        messageField?.scrollRangeToVisible(range)
-        
+        messageField?.moveTextUp()
     }
     // set the correct view depending on input from user
     func changeViews() {
