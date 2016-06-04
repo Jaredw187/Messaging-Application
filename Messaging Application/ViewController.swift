@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         addHandlers()
-        self.messageField?.layoutManager.allowsNonContiguousLayout = false
+//        self.messageField?.layoutManager.allowsNonContiguousLayout = false
+        roomLabel?.text = "Room: " + chatRoom
     }
     
     // data

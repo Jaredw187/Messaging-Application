@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4039215686" green="0.62745098040000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" button="YES"/>
                         </accessibility>
@@ -144,7 +144,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.47058823529411764" green="0.68627450980392157" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ApV-VM-rEo" firstAttribute="top" secondItem="UmC-fm-Ic0" secondAttribute="bottom" constant="8" symbolic="YES" id="8ms-Sd-Hfq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ApV-VM-rEo" secondAttribute="trailing" constant="4" id="ATW-Oq-Hgx"/>
@@ -203,7 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4039215686" green="0.62745098040000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Jql-np-WK6" secondAttribute="trailing" constant="93" id="7w1-RP-MgL"/>
                             <constraint firstItem="QP1-ol-3fB" firstAttribute="top" secondItem="wJx-KG-TtE" secondAttribute="bottom" constant="109" id="8J1-Cn-I5M"/>
@@ -284,12 +284,13 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7e-kT-Jio">
                                 <rect key="frame" x="46" y="122" width="229" height="291"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98710332783969845" green="0.98993036214843155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.47058823529999999" green="0.68627450980000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5lL-Af-PmI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="79i-BF-Fp2"/>
                             <constraint firstItem="C7e-kT-Jio" firstAttribute="trailing" secondItem="jqP-Gg-mPP" secondAttribute="trailing" id="8cQ-y8-p0F"/>
@@ -314,6 +315,7 @@
                     <connections>
                         <outlet property="messageField" destination="C7e-kT-Jio" id="6mk-Jk-8jD"/>
                         <outlet property="messageInputField" destination="gda-8U-hxu" id="EWZ-Q6-cTS"/>
+                        <outlet property="roomLabel" destination="5lL-Af-PmI" id="Es2-xd-sSs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -322,6 +324,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FiP-Ww-URF"/>
+        <segue reference="N7O-bb-0nu"/>
     </inferredMetricsTieBreakers>
 </document>
