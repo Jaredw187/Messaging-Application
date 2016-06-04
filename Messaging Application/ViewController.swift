@@ -21,13 +21,13 @@ class ViewController: UIViewController {
         
         socket.on("connect") {data, ack in
             print("connected")
+            self.socket.emit("join", ["room":chatRoom])
         }
         socket.on("newMessage") { data, ack in
             print("got it")
             self.recieveMessage(String(data[0]))
         }
         socket.connect()
-        socket.emit("join", chatRoom)
     }
     
     override func viewDidLoad() {

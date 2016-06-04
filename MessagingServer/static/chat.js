@@ -17,9 +17,8 @@ socket.on('connect', function() {
 
 socket.on("newMessage", function(data) {
     var messages = document.getElementById("messages");
-    data = "    " + data + '\n'
-    //$("<ol>").addClass("text").text(data).appendTo(messages);
-    messages.innerHTML += data
+    data = "    " + data + '\n';
+    messages.innerHTML += data;
     messages.scrollTop = messages.scrollHeight - messages.clientHeight;
 });
 
@@ -29,7 +28,7 @@ $(".input").on("submit", function(action) {
     var message = $("#message").val();
 
     if (!message)  return;
-    message = room + ' - ' + name + ': ' + message
+    message = room + ' - ' + name + ': ' + message;
     socket.emit("newMessage", {message:message, room:room});
 
     $("#message").val("");
@@ -41,9 +40,7 @@ $(".inputRoom").on("submit", function(action) {
     if (!room)
         return;
 
-    socket.emit('join', {
-        room:room
-    });
+    socket.emit('join', { room:room });
 
     $("#room").val("");
     document.getElementById("getRoom").style.display = 'none';
@@ -63,4 +60,11 @@ $(".inputName").on("submit", function(action) {
     document.getElementById("chat").style.display = 'initial';
     document.getElementById("userName").innerHTML = "User Name: " + name;
 
+});
+$("#newName").on("click", function() { document.getElementById("getName").style.display = 'initial'});
+$("#newChat").on("click", function() {
+    document.getElementById("getRoom").style.display = 'initial';
+    document.getElementById("chat").style.display = 'none';
+    document.getElementById("chatRoom").innerHTML = "";
+    socket.emit('leave', { room:room })
 });

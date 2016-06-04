@@ -7,6 +7,7 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 recip_sockets = {}
 
+
 @app.route('/')
 def index():
     return flask.render_template('chat.html')
@@ -16,16 +17,21 @@ def index():
 def not_found(code):
     return flask.redirect(flask.url_for('index'))
 
+
 @socketio.on("join")
 def join(data):
     print("joined")
-    print(data)
     join_room(data['room'])
 
 
+@socketio.on("leave")
+def leave(data):
+    print("left")
+    leave_room(data['room'])
+
 @socketio.on('newMessage')
 def newMessage(data):
-    print(data['room'])
+    print("emitting to " + data['room'])
     emit('newMessage', data['message'], broadcast=True, room=data['room'])
 
 if __name__ == '__main__':
