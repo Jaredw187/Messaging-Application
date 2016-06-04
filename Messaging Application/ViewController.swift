@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     }
     
     func getMessage() {
-        message = chatRoom + " - " + userName + ": " + messageInputField.text!
+        message = userName + ": " + messageInputField.text!
         messageInputField.text = ""
         socket.emit("newMessage", ["message":message, "room":chatRoom])
         

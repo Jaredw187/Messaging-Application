@@ -28,7 +28,7 @@ $(".input").on("submit", function(action) {
     var message = $("#message").val();
 
     if (!message)  return;
-    message = room + ' - ' + name + ': ' + message;
+    message = name + ': ' + message;
     socket.emit("newMessage", {message:message, room:room});
 
     $("#message").val("");

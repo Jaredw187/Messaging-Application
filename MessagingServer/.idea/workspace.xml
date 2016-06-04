@@ -53,25 +53,25 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/chat.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
                   <folding>
-                    <element signature="e#595#836#0" expanded="false" />
-                    <element signature="e#1298#1611#0" expanded="false" />
-                    <element signature="e#1754#1979#0" expanded="false" />
+                    <element signature="e#870#1234#0" expanded="false" />
+                    <element signature="e#1283#1596#0" expanded="false" />
+                    <element signature="e#1739#1964#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -98,8 +98,8 @@
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/static/styles.css" />
         <option value="$PROJECT_DIR$/templates/chat.html" />
-        <option value="$PROJECT_DIR$/static/chat.js" />
         <option value="$PROJECT_DIR$/MessagingServer.py" />
+        <option value="$PROJECT_DIR$/static/chat.js" />
       </list>
     </option>
   </component>
@@ -500,9 +500,9 @@
         <state relative-caret-position="285">
           <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,9 +538,9 @@
         <state relative-caret-position="435">
           <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,9 +576,9 @@
         <state relative-caret-position="435">
           <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -648,9 +648,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,9 +695,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,14 +725,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/chat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -753,13 +745,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#595#836#0" expanded="false" />
-            <element signature="e#1298#1611#0" expanded="false" />
-            <element signature="e#1754#1979#0" expanded="false" />
+            <element signature="e#870#1234#0" expanded="false" />
+            <element signature="e#1283#1596#0" expanded="false" />
+            <element signature="e#1739#1964#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
