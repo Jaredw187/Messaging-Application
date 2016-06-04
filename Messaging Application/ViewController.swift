@@ -10,7 +10,7 @@ import UIKit
 
 
 // globals. sad face :'(
-var chatRoom: String = "ChatRoom1"
+var chatRoom: String = "r"
 var userName: String = "Jared"
 
 class ViewController: UIViewController {
@@ -83,8 +83,9 @@ class ViewController: UIViewController {
 //        var _msg = String(msg.characters.dropFirst())
 //        _msg = String(_msg.characters.dropLast())
         messageField?.text = messageField?.text.stringByAppendingString(msg + "\n")
-        let range = (NSMakeRange(((messageField?.text.characters.count)!-1), 0))
-        messageField?.scrollRangeToVisible(range)
+//        scroll
+//        let range = (NSMakeRange(((messageField?.contentSize.height)?-1), 0))
+//        messageField?.scrollRangeToVisible(range)
         
     }
     // set the correct view depending on input from user

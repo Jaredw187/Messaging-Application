@@ -17,7 +17,9 @@ socket.on('connect', function() {
 
 socket.on("newMessage", function(data) {
     var messages = document.getElementById("messages");
-    $("<ol>").addClass("text").text(data).appendTo(messages);
+    data = "    " + data + '\n'
+    //$("<ol>").addClass("text").text(data).appendTo(messages);
+    messages.innerHTML += data
     messages.scrollTop = messages.scrollHeight - messages.clientHeight;
 });
 

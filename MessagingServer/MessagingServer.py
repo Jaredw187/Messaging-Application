@@ -8,20 +8,25 @@ socketio = SocketIO(app)
 recip_sockets = {}
 
 @app.route('/')
-def hello_world():
+def index():
     return flask.render_template('chat.html')
 
 
-@socketio.on('join')
-def on_join(data):
+@app.errorhandler(404)
+def not_found(code):
+    return flask.redirect(flask.url_for('index'))
+
+@socketio.on("join")
+def join(data):
     print("joined")
+    print(data)
     join_room(data['room'])
 
 
 @socketio.on('newMessage')
 def newMessage(data):
     print(data['room'])
-    emit('newMessage', data['message'], broadcast=True) # , room=data['room'])
+    emit('newMessage', data['message'], broadcast=True, room=data['room'])
 
 if __name__ == '__main__':
     app.run()

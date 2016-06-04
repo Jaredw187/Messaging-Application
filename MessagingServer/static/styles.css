@@ -1,14 +1,63 @@
-
 body{
-    margin-left: 40%;
-	height:100%;
-    background: url('/static/dark_wall.png') left top repeat;
+    background: #c9c9c9;/*url('/static/dark_wall.png') left top repeat;*/
     font-family: 'Oswald', sans-serif;
-    display: inline-block;
     text-align: center;
-    color: white;
+    color: #e3e3e3;
+    align-content: center;
 }
+
 #messages {
-    text-align: justify;
+    text-align: left;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #89bdd3;
+    margin-top: 0%;
+    border-radius: 20px;
+    white-space: pre;
+    font-size: 10px;
 }
+
+h1 {
+    background-color: #89bdd3;
+    color: #e3e3e3;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: baseline;
+}
+h3 {
+    background-color: #89bdd3;
+    color: #e3e3e3;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo {
+    height: 20px;
+    width: 20px;
+    margin-top: 1%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+#intro {
+    display: block;
+}
+button {
+    background: #89bdd3;
+    color: #e3e3e3;
+    border-radius: 5px;
+}
+
+
 
